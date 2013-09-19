@@ -1,0 +1,11 @@
+<h1>Hello, <%= @user.name %>!</h1>
+
+<p><a href="/post/create">Create a post!</a></p>
+
+<div id="user_recent">
+  <% if User.posts.any? %>
+    <% @post = @user.posts.last %>
+    <h4>Your most recent post:</h4>
+    <%= erb :_view_post %>
+  <% end %>
+</div>

@@ -23,7 +23,11 @@
 
 
   </div>
-<footer>Betsy made this.</footer>
+<footer>
+  <% if @user_id %>
+  <%=  "<form action=\"/logout\" method=\"POST\"><input type=\"submit\" value=\"Log Out\"></form>" %>
+  <% end %>
+</footer>
 
 </body>
 </html>

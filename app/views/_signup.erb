@@ -1,0 +1,24 @@
+<% if @error == true %>
+  <%= "
+    <div>
+      <p>Something went wrong. Please try again.</p>
+    </div>
+  " %>
+<% end %>
+
+<form class="nav_form" action="/signup" method="POST">
+  <div>
+    <input class="field" type="text" id="name" value="Full Name" name="user[name]">
+  </div>
+
+  <div>
+    <input class="field" type="text" id="f-email" value="Email" name="user[email]">
+  </div>
+
+  <div>
+    <input class="field" type="tekst" id="password" value="Password" name="user[password]">
+  </div>
+
+  <div><input type="submit" value="Sign up!"></div>
+
+</form>
