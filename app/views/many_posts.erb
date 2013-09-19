@@ -1,0 +1,6 @@
+<% @posts.each do |this_post| %>
+
+  <%=  erb :_view_post, locals: {this_post: this_post} %>
+  <%= "<hr>" %>
+
+<% end %>

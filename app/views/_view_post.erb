@@ -1,0 +1,29 @@
+<% this_post = @post if @post %>
+
+<div class="post">
+  <div class="title">
+    <h1><%= this_post.title %></h1>
+  </div>
+
+  <div class="content">
+    <%= this_post.content %>
+  </div>
+
+  <div class="tags">
+    Tags:
+    <ul class="taglist">
+      <% this_post.tags.each do |tag| %>
+      <li><a href="/tag/view?id=<%= tag.id %>">#<%= tag.name %></a></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="timestamps">
+    <ul>
+      <li>created at: <%= this_post.created_at %></li>
+      <li>last updated: <%= this_post.updated_at %></li>
+    </ul>
+  </div>
+
+
+</div>
