@@ -18,16 +18,20 @@
   <title></title>
 </head>
 <body>
+  <header>
+    <% if @user_id %>
+      <form action="/logout" method="POST"><input type="submit" value="Log Out"></form>
+      <a href="/user/home">Home</a>
+    <% else %>
+      <a href="/">Home</a>
+    <% end %>
+
+  </header>
   <div class="container">
     <%= yield %>
-
-
   </div>
-<footer>
-  <% if @user_id %>
-  <%=  "<form action=\"/logout\" method=\"POST\"><input type=\"submit\" value=\"Log Out\"></form>" %>
-  <% end %>
-</footer>
+
+<footer></footer>
 
 </body>
 </html>

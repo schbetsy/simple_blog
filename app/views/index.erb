@@ -9,9 +9,13 @@
   <%= erb :_signin %>
 <% end %>
 
-<hr>
-
 <h4>If you're new around here, <a href="/?signup=true">sign up</a>.</h4>
 <% if @sign_up %>
   <%= erb :_signup %>
 <% end %>
+
+<hr>
+
+<h4>Or, browse some blogs</h4>
+<p><a href="/post/recent">Click here</a> to see recent posts from users.</p>
+<p>Someday, we'll add the functionality to search for posts. That day is not today.</p>

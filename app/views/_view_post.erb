@@ -1,9 +1,24 @@
+<% embedded = many ||= false %>
 <% this_post = @post if @post %>
+<% mine = (this_post.user_id == @user_id) %>
 
 <div class="post">
   <div class="title">
-    <h1><%= this_post.title %></h1>
+    <% if embedded %>
+      <h1><a href="/post/<%= this_post.id %>"><%= this_post.title %></a></h1>
+    <% else %>
+      <h1><%= this_post.title %></h1>
+    <% end %>
   </div>
+
+  <% if !mine %>
+    <div class="user">
+      <p>Author: <a href="/user/view?id=<%= this_post.user_id %>"><%= this_post.user.name %></a></p>
+    </div>
+  <% else %>
+    <p>Author: me</p>
+    <p>(<a href="/post/edit?id=<%= this_post.id %>">Edit this post</a>)</p>
+  <% end %>
 
   <div class="content">
     <%= this_post.content %>

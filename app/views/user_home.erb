@@ -1,11 +1,14 @@
 <h1>Hello, <%= @user.name %>!</h1>
 
 <p><a href="/post/create">Create a post!</a></p>
+<p><a href="/user/view?id=<%= @user.id %>">View all of your posts</a></p>
+<p><a href="/post/recent">View recent posts from all users</a></p>
+<hr>
 
 <div id="user_recent">
-  <% if User.posts.any? %>
+  <% if @user.posts.any? %>
     <% @post = @user.posts.last %>
     <h4>Your most recent post:</h4>
-    <%= erb :_view_post %>
+    <%= erb :_view_post, locals: {many: true} %>
   <% end %>
 </div>
