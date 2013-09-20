@@ -1,7 +1,7 @@
 class CreatePosts < ActiveRecord::Migration
   def change
     create_table :posts do |t|
-      t.integer :user_id
+      t.references :user
       t.boolean :deleted, default: false
       t.string :author
       t.string :title
@@ -10,3 +10,5 @@ class CreatePosts < ActiveRecord::Migration
     end
   end
 end
+
+

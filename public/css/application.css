@@ -2,8 +2,72 @@
   margin: 20px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  
 }
 th {
   text-align: left;
+}
+
+h1, h2, h3, h4, .post, p, .browse, .welcome{
+  background-color: #999;
+  opacity: 0.8;
+}
+
+
+h1, h2, h3, h4, p {
+  color: blue;
+  border-radius: 15px;
+  padding-left: 10px;
+}
+
+.post, .browse, .welcome {
+  border-radius: 25px;
+}
+
+a {
+  font-family: sans-serif;
+}
+
+body {
+  background: url('../landscape.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.post {
+  padding: 10px;
+}
+
+.post .content {
+  font-family: serif;
+  line-height: 1.5;
+  font-size: medium;
+}
+
+.tags {
+  display: inline-block;
+}
+
+
+.timestamps {
+  font-variant: small-caps;
+  display: inline-block;
+  font-size: small;
+}
+
+.timestamps li {
+  
+  padding-right: 5px;
+}
+header { 
+  display: inline-block;
+}
+
+ul {
+  display: inline-block;
+}
+li {
+  display: inline;
 }
