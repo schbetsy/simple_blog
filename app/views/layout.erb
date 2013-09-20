@@ -18,10 +18,12 @@
   <title></title>
 </head>
 <body>
-  <header>
+  <header> 
     <% if @user_id %>
-      <form action="/logout" method="POST"><input type="submit" value="Log Out"></form>
-      <a href="/user/home">Home</a>
+      <ul>
+        <li><form action="/logout" method="POST"><input type="submit" value="Log Out"></form></li>
+        <li><a href="/user/home">Home</a></li>
+      </ul>
     <% else %>
       <a href="/">Home</a>
     <% end %>

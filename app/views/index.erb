@@ -1,21 +1,25 @@
-<h1>Welcome to Blogging!</h1>
+<div class="welcome">
+  <h1>Welcome to Blogging!</h1>
 
-<% if @need_login %>
-<%= "<p>You need to be logged in to do that!</p>" %>
-<% end %>
+  <% if @need_login %>
+  <%= "<p>You need to be logged in to do that!</p>" %>
+  <% end %>
 
-<h4>If you already have an account, <a href="/?signin=true">sign in</a>.</h4>
-<% if @sign_in %>
-  <%= erb :_signin %>
-<% end %>
+  <h4>If you already have an account, <a href="/?signin=true">sign in</a>.</h4>
+  <% if @sign_in %>
+    <%= erb :_signin %>
+  <% end %>
 
-<h4>If you're new around here, <a href="/?signup=true">sign up</a>.</h4>
-<% if @sign_up %>
-  <%= erb :_signup %>
-<% end %>
+  <h4>If you're new around here, <a href="/?signup=true">sign up</a>.</h4>
+  <% if @sign_up %>
+    <%= erb :_signup %>
+  <% end %>
+</div>
 
 <hr>
 
-<h4>Or, browse some blogs</h4>
-<p><a href="/post/recent">Click here</a> to see recent posts from users.</p>
-<p>Someday, we'll add the functionality to search for posts. That day is not today.</p>
+<div class="browse">
+  <h4>Or, browse some blogs</h4>
+  <p><a href="/post/recent">Click here</a> to see recent posts from users.</p>
+  <p>Someday, we'll add the functionality to search for posts. That day is not today.</p>
+</div>
