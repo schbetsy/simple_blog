@@ -13,7 +13,7 @@ end
 def display_tags(tag_array)
   tag_string = ""
   tag_array.each do |tag|
-    tag_string << "\##{tag.name}, "
+    tag_string << "#{tag.name}, "
   end
   tag_string[0..-3]
 end
